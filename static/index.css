@@ -33,13 +33,6 @@
   transform: translateY(10px);
 }
 
-.nav-links a,
-.brand,
-.image-frame img,
-.content a {
-  will-change: transform, opacity;
-}
-
 *,
 *::before,
 *::after {
