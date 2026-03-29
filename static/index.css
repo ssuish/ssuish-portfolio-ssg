@@ -239,14 +239,6 @@ a:focus-visible {
   text-align: center;
 }
 
-.image-caption {
-  margin-top: var(--space-2);
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.5;
-  text-align: center;
-}
-
 .img-loading {
   opacity: 0.45;
   filter: blur(4px);

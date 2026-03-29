@@ -26,20 +26,24 @@ function initImagePolish(article) {
     if (img.complete) markReady();
     else {
       img.addEventListener("load", markReady, { once: true });
-      img.addEventListener(
-        "error",
-        () => img.classList.remove("img-loading"),
-        { once: true },
-      );
+      img.addEventListener("error", () => img.classList.remove("img-loading"), {
+        once: true,
+      });
     }
 
-    if (!img.closest(".image-frame")) {
+    const wrapper = img.parentElement;
+    const isStandaloneImageParagraph =
+      wrapper?.tagName === "P" &&
+      wrapper.childElementCount === 1 &&
+      wrapper.firstElementChild === img;
+
+    if (!img.closest(".image-frame") && isStandaloneImageParagraph) {
       const frame = document.createElement("figure");
       frame.className = "image-frame";
-      img.parentNode.insertBefore(frame, img);
+      wrapper.parentNode.insertBefore(frame, wrapper);
       frame.appendChild(img);
 
-      const maybeCaptionP = frame.nextElementSibling;
+      const maybeCaptionP = wrapper.nextElementSibling;
       if (maybeCaptionP && maybeCaptionP.tagName === "P") {
         const em = maybeCaptionP.querySelector("em");
         const onlyText =
@@ -52,6 +56,7 @@ function initImagePolish(article) {
           maybeCaptionP.remove();
         }
       }
+      wrapper.remove();
     }
   });
 }
