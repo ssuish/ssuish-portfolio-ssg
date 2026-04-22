@@ -6,7 +6,7 @@ If you’d like to talk about work, collaboration, or anything related to softwa
 
 ## Email
 
-`kofeejan.games@gmail.com`
+[kofeejan.games@gmail.com](mailto:kofeejan.games@gmail.com)
 
 ## Links
 

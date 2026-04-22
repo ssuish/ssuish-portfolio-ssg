@@ -1,6 +1,6 @@
 # Static Site Portfolio Generator
 
-[< Back to Projects](/projects/)
+[<- Back to Projects](/projects/)
 
 This site is powered by a custom **static site generator** built in Python and maintained in this repository.
 
@@ -33,5 +33,5 @@ I wanted a portfolio that:
 
 ## Links
 
-- Repository: https://github.com/ssuish/ssuish-portfolio
+- Repository: https://github.com/ssuish/ssuish-portfolio-ssg
 
